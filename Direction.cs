@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace DZ_Lesson_5
 {
-    internal class Class1
+    public enum Direction
     {
+        NoType,
+        Long,
+        Short
+       
     }
 }
