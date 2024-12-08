@@ -59,7 +59,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Direction.cs" />
-    <Compile Include="Level.cs" />
     <Compile Include="MarketInfo.cs" />
     <Compile Include="Position.cs" />
     <Compile Include="Program.cs" />
