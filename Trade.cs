@@ -16,11 +16,14 @@ namespace DZ_Lesson_5
         public string Symbol;
         public Direction Dir;
 
+       
         //public Trade()
         //{
         //}
 
-        public Trade(string Symbol, decimal Price, decimal Volume, Direction Dir)
+        
+        public Trade()
+        //public Trade(string Symbol, decimal Price, decimal Volume, Direction Dir)
         {
             this.Symbol = Symbol;
             this.Price = Price;

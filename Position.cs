@@ -38,15 +38,14 @@ namespace DZ_Lesson_5
         {
             Trade trade = new Trade();
             int num = random.Next(-10, 10);
-
             trade.Volume = Math.Abs(num);
             trade.Symbol = Symbol;
-           
+            trade.Price = random.Next(70000, 80000);
 
             if (num > 0)
             {
                 // Long
-                Direction PosType = Direction.Long;
+                PosType = Direction.Long;
                 trade.Price = MarketInfo.GetMarketAsk();
                 trade.TPPrice = trade.Price + tpSize;
                 trade.SLPrice = trade.Price - slSize;
@@ -55,18 +54,14 @@ namespace DZ_Lesson_5
             else if (num < 0)
             {
                 //Short
-                Direction PosType = Direction.Short;
+                PosType = Direction.Short;
                 trade.Price = MarketInfo.GetMarketBid();
                 trade.TPPrice = trade.Price - tpSize;
                 trade.SLPrice = trade.Price + slSize;
                 openVolume -= trade.Volume;
             }
 
-            trade.Volume = Math.Abs(num);
-
-            trade.Price = random.Next(70000, 80000);
-
-            string str = "Volume = " + trade.Volume.ToString() + " / Price = " + trade.Price.ToString() + " / Stop = " + trade.SLPrice.ToString() + " / Take = " + trade.TPPrice.ToString();
+            string str = PosType + "Volume = " + trade.Volume.ToString() + " / Price = " + trade.Price.ToString() + " / Stop = " + trade.SLPrice.ToString() + " / Take = " + trade.TPPrice.ToString();
 
             Console.WriteLine(str);
         }
