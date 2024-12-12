@@ -11,6 +11,8 @@ namespace DZ_Lesson_5
         static void Main(string[] args)
         {
             Position position = new Position();
+
+            Console.ReadLine();
         }
     }
 }
